@@ -1,0 +1,91 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+  /* background: linear-gradient(135deg, #a8e063); */
+}
+
+/* Container */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.home-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+}
+
+/* New Single Top Heading */
+.main-heading {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Description */
+.description {
+  font-size: 14px;
+  color: #f9f9f9;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.home-button {
+  text-decoration: none;
+  padding: 14px;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #2f6e4f;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-button:hover {
+  background-color: #e2f0dc;
+  transform: scale(1.02);
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .home-box {
+    padding: 25px 15px;
+  }
+
+  .main-heading {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .home-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
