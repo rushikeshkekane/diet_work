@@ -1,4 +1,4 @@
-// src/utils/generatePlan.js
+// 📁 src/utils/generatePlan.js
 
 const generatePlan = (data) => {
   const bmi = (data.weight / ((data.height / 100) ** 2)).toFixed(1);
@@ -7,10 +7,7 @@ const generatePlan = (data) => {
 
   let recommendation = '';
   let foodItems = [];
-
-  console.log('User Diet Preference:', dietType);
-  console.log('User Goal:', goal);
-  console.log('User BMI:', bmi);
+  let workoutPlan = [];
 
   // 🟡 BMI-Based Recommendation
   if (bmi < 18.5) {
@@ -28,15 +25,18 @@ const generatePlan = (data) => {
   const goalNote = getGoalNote(goal);
   recommendation += ` ${goalNote}`;
 
+  // 🏋️‍♂️ Workout Plan
+  workoutPlan = getWorkoutPlan(goal);
+
   return {
     name: data.name,
     bmi,
     recommendation,
     foodItems,
+    workoutPlan
   };
 };
 
-// 🔸 Helper: Underweight Food Plan
 const getUnderweightFoods = (diet) => {
   switch (diet) {
     case 'non-vegetarian':
@@ -48,7 +48,6 @@ const getUnderweightFoods = (diet) => {
   }
 };
 
-// 🔸 Helper: Overweight Food Plan
 const getOverweightFoods = (diet) => {
   switch (diet) {
     case 'non-vegetarian':
@@ -60,7 +59,6 @@ const getOverweightFoods = (diet) => {
   }
 };
 
-// 🔸 Helper: Healthy Weight Food Plan
 const getHealthyWeightFoods = (diet) => {
   switch (diet) {
     case 'non-vegetarian':
@@ -72,7 +70,6 @@ const getHealthyWeightFoods = (diet) => {
   }
 };
 
-// 🔸 Helper: Goal Note
 const getGoalNote = (goal) => {
   switch (goal) {
     case 'weight_loss':
@@ -83,6 +80,31 @@ const getGoalNote = (goal) => {
       return '🧘 Goal: Maintain – Focus on portion control and consistency.';
     default:
       return '';
+  }
+};
+
+const getWorkoutPlan = (goal) => {
+  switch (goal) {
+    case 'weight_loss':
+      return [
+        '🏃 30 mins Cardio (Running or Cycling)',
+        '🏋️ 3 sets of HIIT (Jump Squats, Push-ups, Burpees)',
+        '🧘 Cool-down with 10 mins Yoga or Stretching'
+      ];
+    case 'weight_gain':
+      return [
+        '🏋️ Heavy Weight Lifting (Squats, Deadlifts, Bench Press)',
+        '💪 3 sets of Isolation Exercises (Biceps, Triceps)',
+        '🥤 Post-Workout Protein Shake & 10 mins Stretching'
+      ];
+    case 'maintain_weight':
+      return [
+        '🚶 20 mins Brisk Walking or Light Jog',
+        '🏋️ 2 sets of Full Body Strength (Bodyweight or Dumbbells)',
+        '🧘 Light Yoga for Flexibility & Mindfulness'
+      ];
+    default:
+      return ['⚠️ No specific workout – please choose a goal.'];
   }
 };
 
