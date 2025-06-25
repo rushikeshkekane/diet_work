@@ -5,7 +5,12 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #e0f7fa, #80deea); /* Light Cyan to Aqua gradient */
+  background: 
+    linear-gradient(rgba(224, 247, 250, 0.85), rgba(128, 222, 234, 0.85)),
+    url('../assets/userform-bg.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -64,13 +69,22 @@
 }
 
 /* Dropdown arrow for select on mobile */
-.user-form select {
-  appearance: none;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='gray' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6l4 4 4-4H4z'/%3E%3C/svg%3E");
+/* Page background wrapper - applied only to UserForm page */
+.userform-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: 
+    linear-gradient(rgba(30, 36, 37, 0.85), rgba(0, 4, 4, 0.85)),
+    url("https://st4.depositphotos.com/1229718/20734/i/1600/depositphotos_207344858-stock-photo-lifestyle-background-healthy-active-fitness.jpg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 /* Submit button styling */
 .user-form button {

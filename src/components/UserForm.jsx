@@ -1,4 +1,3 @@
-// src/components/UserForm.jsx
 import React, { useState } from 'react';
 import '../styles/userform.css';
 
@@ -67,6 +66,13 @@ const UserForm = ({ onSubmit }) => {
           required
         />
 
+        <select name="gender" value={formData.gender} onChange={handleChange} required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+
         <select name="diet" value={formData.diet} onChange={handleChange} required>
           <option value="">Select Diet Preference</option>
           <option value="vegetarian">Vegetarian</option>
@@ -81,22 +87,15 @@ const UserForm = ({ onSubmit }) => {
           <option value="maintain_weight">Maintain Weight</option>
         </select>
 
-        {/* Future fields can be enabled later */}
-        {/* 
-        <input
-          type="text"
-          name="gender"
-          placeholder="Gender (optional)"
-          value={formData.gender}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="activity"
-          placeholder="Activity Level (optional)"
-          value={formData.activity}
-          onChange={handleChange}
-        />
+        <select name="activity" value={formData.activity} onChange={handleChange} required>
+          <option value="">Select Activity Level</option>
+          <option value="sedentary">Sedentary (Little/no exercise)</option>
+          <option value="light">Light (1–3 days/week)</option>
+          <option value="moderate">Moderate (3–5 days/week)</option>
+          <option value="active">Active (6–7 days/week)</option>
+          <option value="very_active">Very Active (Daily intense training)</option>
+        </select>
+
         <input
           type="text"
           name="allergies"
@@ -104,6 +103,7 @@ const UserForm = ({ onSubmit }) => {
           value={formData.allergies}
           onChange={handleChange}
         />
+
         <input
           type="text"
           name="medical"
@@ -111,7 +111,6 @@ const UserForm = ({ onSubmit }) => {
           value={formData.medical}
           onChange={handleChange}
         />
-        */}
 
         <button type="submit">🚀 Generate My Diet Plan</button>
       </form>

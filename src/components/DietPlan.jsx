@@ -15,7 +15,7 @@ const DietPlan = ({ userData }) => {
 
   return (
     <div className="diet-result">
-      <h2>🍽️ Personalized Diet Plan for {name}</h2>
+      <h2>🍽️ Personalized Diet Plan & Workout Plan for {name}</h2>
       <h3>Your BMI: {bmi}</h3>
       <p>{recommendation}</p>
 
