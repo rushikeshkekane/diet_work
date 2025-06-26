@@ -3,7 +3,9 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  background: url('https://thumbs.dreamstime.com/b/sports-nutrition-fitness-equipment-sports-nutrition-supplements-healthy-food-dumbbells-black-background-fitness-112716854.jpg')
+    no-repeat center center fixed;
+  background-size: cover;
 }
 
 .login-container {

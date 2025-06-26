@@ -8,7 +8,9 @@
 body, html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100%;
-  /* background: linear-gradient(135deg, #a8e063); */
+  background: url('https://thumbs.dreamstime.com/b/sports-nutrition-fitness-equipment-sports-nutrition-supplements-healthy-food-dumbbells-black-background-fitness-112716854.jpg')
+    no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* Container */
@@ -20,24 +22,22 @@ body, html {
   padding: 20px;
 }
 
+/* Box */
 .home-box {
-  background: rgba(255, 255, 255, 0.1);
   padding: 30px 20px;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
   width: 100%;
   max-width: 400px;
-  backdrop-filter: blur(10px);
 }
 
-/* New Single Top Heading */
+/* Heading */
 .main-heading {
   font-size: 28px;
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 20px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Description */
