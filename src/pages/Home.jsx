@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="home-box">
-        <h1 className="main-heading">Welcome to Diet Recommendation System</h1>
+        <h1 className="main-heading">Welcome to Diet & Workout Recommendation System</h1>
         <p className="description">
           Your personalized diet plan starts here. Let’s improve your health with science-backed meal suggestions!
         </p>
